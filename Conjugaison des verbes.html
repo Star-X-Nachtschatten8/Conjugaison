@@ -1,0 +1,213 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<script type="text/javascript" src="verbes.js" >
+
+</script>
+</head>
+<body>
+<h1>Conjugaison des verbes</h1>
+Introdruit un verbe
+<form id="Formular"><input id="verbe" value="décoller"><input type="submit" value="conjuger"/></form>
+<ul>
+<li>je/j' <span id="1ps"></span></li>
+<li>tu <span id="2ps"></span></li>
+
+<li>il/elle <span id="3ps"></span></li>
+<li>nous <span id="1ppl"></span></li>
+<li>vous <span id="2ppl"></span></li>
+<li>ils/elles <span id="3ppl"></span></li>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" >
+
+
+
+function Conjuger (event) {
+event.preventDefault();
+mein_verb=document.getElementById("verbe").value;
+
+for(var i=0;i<10900;i++){ 
+  
+   if (verbes[i].Infinitif) {
+
+if (verbes[i].Infinitif.Présent[0]==mein_verb) {
+   console.log(i,verbes[i].Infinitif.Présent[0]);	
+   
+    document.getElementById("1ps").innerHTML = verbes[i].Indicatif.Présent[0];
+   document.getElementById("2ps").innerHTML = verbes[i].Indicatif.Présent[1];
+  document.getElementById("3ps").innerHTML = verbes[i].Indicatif.Présent[2];  
+  document.getElementById("1ppl").innerHTML = verbes[i].Indicatif.Présent[3];
+   document.getElementById("2ppl").innerHTML = verbes[i].Indicatif.Présent[4];
+  document.getElementById("3ppl").innerHTML = verbes[i].Indicatif.Présent[5];  
+  
+  	
+}	
+   }  
+   
+}
+
+
+
+return false;	
+}
+
+var form =document.getElementById("Formular");
+form.addEventListener("submit",Conjuger,true);
+
+
+</script>
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
